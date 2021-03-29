@@ -1,0 +1,33 @@
+项目总结：
+项目名称：微信(高度还原)
+项目周期，2021/3/27-20213/3/29
+前端：1
+UI：1
+测试：暂无
+说明：此项目是通过vue来完成的，因为本人是一名在校大学生通过自学vue所以其中有些前后台的交互的接口可能有bug，但后期会进行修改，此项目未联系后台数据，
+纯属前端的数据，高度的还原了微信的消息界面，通讯录界面，发现界面以及我的界面，
+项目总结
+vue
+安装脚手架这一步只需要安装一次即可省略
+创建项目
+进入想要创建的目录地址这里以d盘为例
+在底盘的导航栏选中输入cmd回车然后进入cmd界面
+vue init webpack name(代表项目的名称)
+然后等待安装
+安装成功输入npm run dev
+然后拷贝地址去浏览器输入打开，如果不想输入地址就需要改变config下面index.js里面的autoOpenBrowser: false,把false改为true即可
+引入外部文件这里可以引入bootstrap但2者都属于框架这里就没有要引入可以直接使用组件(目前还在学习)
+以引入图标font-awesome为例
+暗转依赖文件 npm install font-awesome
+2.在main.js里面引入import 'font-awesome/css/font-awesome.min.css'
+3.更改new ExtractTextPlugin({
+  filename: utils.assetsPath('css/[name].[contenthash].css'),
+  allChunks: true,
+}),
+改成
+new ExtractTextPlugin({
+    idnex.js这个文件主要是用来路由的，所有的路由交互都可以在里面完成
+    main.js这个文件主要是用来映入外部资源的，首先通过webpack安装然后再这里面引入，
+    commponets这个文件夹主要是存放vue文件的，
+    在一个项目之中有动态的页面也有定死的页面，可以把定死的页面写成一个组件，然后再引入到app.vue这个页面的<router-view>下面，在这个页面可以上部分分为动态的页面，下面分为静态页面，
+    在通过import的方式引入组件，
